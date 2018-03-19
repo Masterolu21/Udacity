@@ -5,6 +5,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -12,10 +14,10 @@
 
     <div class="row">
       <div class="col-md-6">
-        <img src="./bootstrap-prestructure_files/100x100">
+        <img-responsive src="./bootstrap-prestructure_files/100x100">
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6 text-right text-uppercase">
         <h1>Jane Doette</h1>
         <h3>Front-end Ninja</h3>
       </div>
@@ -23,7 +25,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <img src="./bootstrap-prestructure_files/1140x350">
+        <img-responsive src="./bootstrap-prestructure_files/1140x350">
       </div>
     </div>
 
@@ -36,37 +38,53 @@
     <div class="row">
 
       <div class="col-md-6">
-        <img src="./bootstrap-prestructure_files/555x300">
-        <h3>Appify</h3>
+        <img-responsive src="./bootstrap-prestructure_files/555x300">
+          <h3>Appify</h3>
 
-        <p>
-          <a href="http://github.com/">Link to project</a>
-        </p>
+          <p>
+            <a href="http://github.com/">Link to project</a>
+          </p>
       </div>
 
       <div class="col-md-6">
-        <img src="./bootstrap-prestructure_files/555x300">
-        <h3>Appify</h3>
-        <p>
-          <a href="http://github.com/">Link to project</a>
-        </p>
+        <img-responsive src="./bootstrap-prestructure_files/555x300">
+          <h3>Appify</h3>
+          <p>
+            <a href="http://github.com/">Link to project</a>
+          </p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
-        <img src="./bootstrap-prestructure_files/555x300">
-        <h3>Appify</h3>
-        <p><a href="http://github.com/">Link to project</a></p>
+        <img-responsive src="./bootstrap-prestructure_files/555x300">
+          <h3>Appify</h3>
+          <p><a href="http://github.com/">Link to project</a></p>
       </div>
       <div class="col-md-6">
-        <img src="./bootstrap-prestructure_files/555x300">
-        <h3>Appify</h3>
-        <p><a href="http://github.com/">Link to project</a></p>
+        <img-responsive src="./bootstrap-prestructure_files/555x300">
+          <h3>Appify</h3>
+          <p><a href="http://github.com/">Link to project</a></p>
       </div>
     </div>
   </div>
 
+  <button class="btn btn-primary btn-lg" data-toggle="modal" data-targert="#project1">
+Launch demo modal
+  </button>
+
+  <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+        </div>
+        <div class="modal-body">
+          <img class="img-responsive" src="images/555.jpeg"> This was my first project in this class. I learned a lot about HTML and CSS.
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
