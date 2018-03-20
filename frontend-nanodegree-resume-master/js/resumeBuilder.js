@@ -62,24 +62,24 @@ var work = {
 "position" : "Store Operator",
 "employer" : "Google/SMX",
 "location" : "Costco",
-"date" : "December 2017 to Present",
-"work description" : "• Searching and picking up items across multiple shopping outlets for Google Express customers.\n•Packaging, Palletizing, and shipping items for Google Express.\n• Paying and fulfilling my daily quota in sales.\n • Opening and closing the store/maintenance check.\n"
+"dates" : "December 2017 to Present",
+"description" : "• Searching and picking up items across multiple shopping outlets for Google Express customers.\n•Packaging, Palletizing, and shipping items for Google Express.\n• Paying and fulfilling my daily quota in sales.\n • Opening and closing the store/maintenance check.\n"
 },
 
 {
 "position" : "IT/Teacher's Assistant/Mentor",
 "employer" : "CUNY YORK COLLEGE",
 "location" : "CUNY YORK COLLEGE",
-"date" : "August 2015 to December 2017",
-"work description" : "• Opened and set up the lab. Running virus scans, and keeping the lab safe clean and secure\n• Helping students and professors with any questions regarding software, projectors,\nlaptops, and CUNY Portal. Fixing any damaged/corrupted Desktops\n• Helping students with research papers, essays and other writings assignments\n"
+"dates" : "August 2015 to December 2017",
+"description" : "• Opened and set up the lab. Running virus scans, and keeping the lab safe clean and secure\n• Helping students and professors with any questions regarding software, projectors,\nlaptops, and CUNY Portal. Fixing any damaged/corrupted Desktops\n• Helping students with research papers, essays and other writings assignments\n"
 },
 
 {
 "position" : "Technician",
 "employer" : "New York Department of Education",
 "location" : "Preparatory Academy for Writers",
-"date" : "December 2013 to June 2014",
-"work description" : "• In charge of maintenance and setup for IPads and MacBook\n• Assisted teachers and students with any questions concerning hardware or software\n• Packing/unpacking and setting up/updating software\n"
+"dates" : "December 2013 to June 2014",
+"description" : "• In charge of maintenance and setup for IPads and MacBook\n• Assisted teachers and students with any questions concerning hardware or software\n• Packing/unpacking and setting up/updating software\n"
 }
 ],
 
@@ -96,6 +96,15 @@ display() {
 
   var formattedEmployerTitle = formattedEmployer + formattedPosition;
     $(".work-entry:last").append(formattedEmployerTitle);
+
+  var formattedDates = HTMLworkDates.replace("%data", work.jobs[job].dates);
+      $("#dates").append(formattedDates);
+      $(".work-entry:last").append(formattedDates);
+
+  var formattedDescription = HTMLworkDescription .replace("%data", work.jobs[job].description);
+    $("#dates").append(formattedDescription);
+    $(".work-entry:last").append(formattedDescription);
+
   }
 }
 }
@@ -138,6 +147,21 @@ This is empty on purpose! Your code to build the resume will go here.
 
 bio.display();
 work.display();
+function inName(name) {
+  name = name.trim().split(" ");
+  console.log(name);
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase();
+  name[0].slice(1).toLowerCase();
+  return name[0] + " " + name[1];
+}
 
-   $("#main").append(work["position"]);
-   $("#main").append(education.name);
+$("#main").append(internationalizeButton);
+$(document).click(function(loc) {
+
+var x = loc.pageX;
+var y = loc.pageY;
+
+logClicks(x,y);
+
+});
