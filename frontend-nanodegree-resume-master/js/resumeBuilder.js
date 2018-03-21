@@ -130,15 +130,42 @@ var education = {
 
 var projects = {
   "projects" : [ {
-    "title" : "",
-    "dates" : "",
-    "description" : "",
+
+    "title" : "Project 1",
+    "dates" : "06/17/2017 to 03/20/2018",
+    "description" : "Something Special.",
+    "url": " ",
     "images" : [ ""
  ]
   }
 
-  ]
+],
+
+display()
+{
+  for(project in projects.projects){
+  $("#projects").append(HTMLprojectStart);
+
+  var formattedProjectTitle = HTMLprojectTitle.replace("%data", projects.projects[project].title)
+  $(".project-entry:last").append(formattedProjectTitle);
+
+  var formattedProjectDates = HTMLprojectDates.replace("%data", projects.projects[project].dates)
+  $(".project-entry:last").append(formattedProjectDates);
+
+  var formattedProjectDescription = HTMLprojectDescription.replace("%data", projects.projects[project].description)
+  $(".project-entry:last").append(formattedProjectDescription);
+
+  if (projects.projects[project].images.length > 0) {
+					for (image in projects.projects[project].images) {
+						var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images[image]);
+						$(".project-entry:last").append(formattedImage);
+					}
+
 }
+}
+  }
+}
+
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
@@ -147,6 +174,8 @@ This is empty on purpose! Your code to build the resume will go here.
 
 bio.display();
 work.display();
+projects.display();
+
 function inName(name) {
   name = name.trim().split(" ");
   console.log(name);
@@ -156,7 +185,7 @@ function inName(name) {
   return name[0] + " " + name[1];
 }
 
-$("#main").append(internationalizeButton);
+
 $(document).click(function(loc) {
 
 var x = loc.pageX;
