@@ -25,7 +25,7 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 50px;
   color: #f5a623;
   line-height: 48px;
   display: inline;
@@ -169,6 +169,7 @@ img {
 
 span {
   padding: 5px;
+  color: white;
 }
 
 #lets-connect {
@@ -194,7 +195,7 @@ span {
     margin-top: 10%;
   }
   .biopic {
-    width: 150px;
+    width: 3000px;
   }
   .welcome-message {
     display: none;
